@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/SouGouDrivers.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/encapsulation/SogouRecord.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchKeyword.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchTimePeriod.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/userSearchVocabulary.scala" afterDir="false" />
+    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="SouGouDrivers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/SouGouQueryAnalysis.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$SogouRecord$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$SogouRecord$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$SogouRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$SogouRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/SouGouDrivers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/SouGouDrivers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchKeyword.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchKeyword.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchTimePeriod.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchTimePeriod.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/userSearchVocabulary.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/userSearchVocabulary.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$SogouRecord$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis$SogouRecord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/SouGouQueryAnalysis.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,20 @@
       <recent name="spark" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SouGouDrivers">
+    <configuration name="SouGouDrivers" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="spark.sougou.driver.SouGouDrivers" />
+      <module name="SouGouQueryAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spark.sougou.driver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SouGouQueryAnalysis" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="spark.SouGouQueryAnalysis" />
       <module name="SouGouQueryAnalysis" />
@@ -89,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SouGouDrivers" />
         <item itemvalue="Application.SouGouQueryAnalysis" />
       </list>
     </recent_temporary>
@@ -103,7 +115,7 @@
       <updated>1686153671662</updated>
       <workItem from="1686153672924" duration="10000" />
       <workItem from="1686153726118" duration="730000" />
-      <workItem from="1686202656871" duration="4935000" />
+      <workItem from="1686202656871" duration="6687000" />
     </task>
     <task id="LOCAL-00001" summary="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */">
       <created>1686154435036</created>
@@ -112,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686154435036</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SouGouDrivers">
+      <created>1686241429608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686241429608</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */" />
-    <option name="LAST_COMMIT_MESSAGE" value="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */" />
+    <MESSAGE value="SouGouDrivers" />
+    <option name="LAST_COMMIT_MESSAGE" value="SouGouDrivers" />
   </component>
 </project>

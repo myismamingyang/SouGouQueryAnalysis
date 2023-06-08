@@ -25,7 +25,7 @@ object SouGouDrivers {
     //3.0转为样例类封装为一条条的记录对象
     val recordRDD: RDD[SogouRecord.Sogou] = logRDD.filter(StringUtils.isNotBlank(_)) //过滤出合法数据
       .map(line => {
-        val arr: Array[String] = line.split("\\s+")  //每行切分入厂
+        val arr: Array[String] = line.split("\\s+") //每行切分入厂
         SogouRecord.Sogou(
           arr(0),
           arr(1),
@@ -35,10 +35,12 @@ object SouGouDrivers {
           arr(5)
         )
       })
-
-    spark.sougou.queryanalysis.searchKeyword.statistics(recordRDD)
-    spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD)
-    spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD)
+    println("搜索关键词统计Top10统计")
+    spark.sougou.queryanalysis.searchKeyword.statistics(recordRDD).foreach(println)
+    println("用户搜索词汇统计Top10统计")
+    spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD).foreach(println)
+    println("搜索时间段统计")
+    spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
 
   }
 }

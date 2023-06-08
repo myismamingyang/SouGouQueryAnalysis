@@ -10,7 +10,7 @@ import spark.sougou.encapsulation.SogouRecord
  * @Function: 3.3搜索时间段统计(小时:分钟,数量)
  */
 object searchTimePeriod {
-  case class statistics(recordRDD: RDD[SogouRecord.Sogou]){
+  def statistics(recordRDD: RDD[SogouRecord.Sogou]):Array[(String, Int)]={
         val result3: Array[(String, Int)] = recordRDD.map(record => {
           //00:00:00
           val tiem: String = record.queryTime.substring(0, 5) //[)
@@ -18,7 +18,8 @@ object searchTimePeriod {
         }).reduceByKey(_ + _)
           .sortBy(_._2, false)
           .take(10)
-        println("搜索时间段统计")
-        result3.foreach(println)
+
+        //result3.foreach(println)
+    result3
   }
 }

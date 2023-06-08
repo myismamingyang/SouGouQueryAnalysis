@@ -14,7 +14,7 @@ import scala.collection.mutable
  * @Function: 3.1搜索关键词统计(word,数量),注意:词要做切割
  */
 object searchKeyword {
-  case class statistics(recordRDD: RDD[SogouRecord.Sogou]){
+  def statistics(recordRDD: RDD[SogouRecord.Sogou]):Array[(String, Int)] = {
     val result1: Array[(String, Int)] = recordRDD.flatMap(record => { //年轻人住房问题 出来: [年轻人,住房,问题]
       import scala.collection.JavaConverters._
       val words: StringOps = record.queryWords //年轻人住房问题
@@ -27,7 +27,7 @@ object searchKeyword {
       .reduceByKey(_ + _)
       .sortBy(_._2, false)
       .take(10)
-    println("搜索关键词统计Top10统计")
-    result1.foreach(println)
+    //result1.foreach(println)
+    result1
   }
 }
