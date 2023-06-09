@@ -35,12 +35,13 @@ object SouGouDrivers {
           arr(5)
         )
       })
-    println("搜索关键词统计Top10统计")
-    spark.sougou.queryanalysis.searchKeyword.statistics(recordRDD).foreach(println)
-    println("用户搜索词汇统计Top10统计")
-    spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD).foreach(println)
-    println("搜索时间段统计")
-    spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
+    spark.sougou.jdbc.mysql.createTable.newTables("keywordstatistics")
+//    println("搜索关键词统计Top10统计")
+//    spark.sougou.queryanalysis.searchKeyword.statistics(recordRDD).foreach(println)
+//    println("用户搜索词汇统计Top10统计")
+//    spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD).foreach(println)
+//    println("搜索时间段统计")
+//    spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
 
   }
 }
