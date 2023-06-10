@@ -14,7 +14,7 @@ object hive {
     Class.forName("org.apache.hive.jdbc.HiveDriver") //看上去像是在使用Hive的server2,本质上使用Spark的ThriftServer
     // 2.获取连接Connection
     val conn: Connection = DriverManager.getConnection(
-      "jdbc:hive2://node2:10000/default", //看上去像是在使用Hive的server2,本质上使用Spark的ThriftServer
+      "jdbc:hive2://node3:10000/default", //看上去像是在使用Hive的server2,本质上使用Spark的ThriftServer
       "root",
       "123456"
     )
