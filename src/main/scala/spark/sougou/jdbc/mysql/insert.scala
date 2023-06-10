@@ -9,7 +9,24 @@ import org.apache.spark.sql.SparkSession
  * @Function:
  */
 object insert {
-  def newTables(table:String): Unit = {
+  def main(args: Array[String]): Unit = {
+    val spark = SparkSession.builder().appName("MysqlInsertTest").master("local").getOrCreate()
+    val jdbcDF = spark.read
+      .format("jdbc")
+      .option("url", "jdbc:mysql://node3:3306/SouGouQueryAnalysis?useUnicode=true&characterEncoding=utf-8")
+      .option("driver", "com.mysql.jdbc.Driver") //驱动
+      .option("user", "root")
+      .option("password", "MMYqq123")
+      //.option("dbtable", s"(select COUNT(1) from customer) customer") 直接查询sql数据
+      .option("dbtable", "inserCreat_test") //加载表  // dbtable: 指定查询功能
+      // s"(sql) dbtable"  为查询sql语法
+      .load()
+    var id: Int = 3
+    var tt: String = "sql-3"
+    spark.sql(s"insert into inserCreat_test(id,commit_log) values('${id}','${tt}');")
+  }
+
+  def newTables(table: String): Unit = {
     val spark = SparkSession.builder().appName("MysqlQueryDemo").master("local").getOrCreate()
     val jdbcDF = spark.read
       .format("jdbc")
@@ -21,6 +38,8 @@ object insert {
       .option("dbtable", table) //加载表  // dbtable: 指定查询功能
       // s"(sql) dbtable"  为查询sql语法
       .load()
-    spark.sql("")
+    var id: Int = 3
+    var tt: String = "sql-3"
+    spark.sql(s"insert into inserCreat_test(id,commit_log) values('${id}','${tt}');")
   }
 }

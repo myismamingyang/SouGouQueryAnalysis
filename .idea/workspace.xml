@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="mysql" />
+    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="mysql">
+      <change afterPath="$PROJECT_DIR$/data/input/person.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/hive.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/jdbc_mysql_OK.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/insert.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/insert.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -46,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/scala/spark" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/input" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -55,13 +70,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\opt\software\GitHub\GitHubProject\spark\SouGouQueryAnalysis\data\input" />
       <recent name="E:\opt\software\GitHub\GitHubProject\spark\SouGouQueryAnalysis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="spark" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SouGouDrivers">
+  <component name="RunManager" selected="Application.jdbc_mysql_OK">
     <configuration name="SouGouDrivers" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="spark.sougou.driver.SouGouDrivers" />
       <module name="SouGouQueryAnalysis" />
@@ -75,12 +91,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SouGouQueryAnalysis" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="spark.SouGouQueryAnalysis" />
+    <configuration name="classT" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.mysql.classT" />
       <module name="SouGouQueryAnalysis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spark.sougou.driver.*" />
+          <option name="PATTERN" value="spark.sougou.jdbc.mysql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="insert" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.mysql.insert" />
+      <module name="SouGouQueryAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spark.sougou.jdbc.mysql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jdbc_mysql_OK" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.mysql.jdbc_mysql_OK" />
+      <module name="SouGouQueryAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spark.sougou.jdbc.mysql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jdbc_test" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.mysql.jdbc_test" />
+      <module name="SouGouQueryAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spark.sougou.jdbc.mysql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,8 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.jdbc_mysql_OK" />
+        <item itemvalue="Application.jdbc_test" />
+        <item itemvalue="Application.insert" />
+        <item itemvalue="Application.classT" />
         <item itemvalue="Application.SouGouDrivers" />
-        <item itemvalue="Application.SouGouQueryAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -107,6 +165,7 @@
       <workItem from="1686153726118" duration="730000" />
       <workItem from="1686202656871" duration="6896000" />
       <workItem from="1686274080851" duration="2589000" />
+      <workItem from="1686395176758" duration="6944000" />
     </task>
     <task id="LOCAL-00001" summary="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */">
       <created>1686154435036</created>
