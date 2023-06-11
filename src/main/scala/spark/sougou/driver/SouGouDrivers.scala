@@ -35,7 +35,7 @@ object SouGouDrivers {
           arr(5)
         )
       })
-    spark.sougou.jdbc.mysql.createTable.newTables("keywordstatistics")
+//    spark.sougou.jdbc.mysql.createTable.newTables("keywordstatistics")
 //    println("搜索关键词统计Top10统计")
 //    spark.sougou.queryanalysis.searchKeyword.statistics(recordRDD).foreach(println)
 //    println("用户搜索词汇统计Top10统计")
