@@ -22,7 +22,7 @@ object insert {
 
     var column1 = "commit_log"
     var column2 = "commit_time"
-    var columns: Array[String] = Array[String](column1, column2)
+    var columns: Array[String] = Array[String](column1)
     var data: String = "'sql-1','2023-06-10 23:56:30'"
 
     // insert into scala_JDBC_test(commit_log,commit_time) values("sql-1",date_format(now(),'%Y-%c-%d %h:%i:%s' ));
@@ -65,20 +65,21 @@ object insert {
     println("sqlstr: " + sqlstr)
     val set: ResultSet = ps.executeQuery(sqlstr)
     // TODO: 打印 sql 结构字段自动增加
-    var setGetString: String = "s\"${columns(0)}: \" + set.getString(columns(0))"
+    var setGetString: String = ""
     if (columns.length > 1) {
       println("多字段查询")
-      for (i <- 1 to columns.length-1) {
+      for (i <- 1 to columns.length) {
         //var setGetStringAll: String = "s\"${columns(0)}: \" + set.getString(columns(0))"
-        setGetString += ", " + "s\"${columns(" + i + ")}: \" + set.getString(columns(" + i + "))"
+        setGetString += ", " + "\"${columns(" + i + ")}: \" + set.getString(columns(" + i + "))"
       }
     } else {
       println("单字段查询")
+      setGetString += "\"${columns(" + 0 + ")}: \" + set.getString(columns(" + 0 + "))"
     }
     println("all: " + setGetString)
     while (set.next()) {
       //println(s"${columns(0)}: " + set.getString(columns(0)), s"${columns(1)}: " + set.getString(columns(1)))
-      println(s"${columns(0)}: " + set.getString(columns(0)), s"${columns(1)}: " + set.getString(columns(1)))
+      println(s"$setGetString")
     }
     connection.close()
   }
