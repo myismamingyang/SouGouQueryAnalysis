@@ -21,9 +21,4 @@ object SogouRecord {
                     clickRank: Int,
                     clickUrl: String
                   )
-
-  case class scala_JDBC_test(
-                              commit_log: String,
-                              commit_time: String
-                            )
 }

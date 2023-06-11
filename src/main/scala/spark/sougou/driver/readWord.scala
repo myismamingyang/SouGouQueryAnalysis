@@ -3,8 +3,7 @@ package spark.sougou.driver
 import org.apache.commons.lang3.StringUtils
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
-import spark.sougou.encapsulation.SogouRecord
-import spark.sougou.jdbc.mysql.insert.insert
+import spark.sougou.encapsulation.testLibrary
 
 /**
  * @Author: Mingyang Ma
@@ -19,11 +18,11 @@ object readWord {
     sc.setLogLevel("WARN")
 
     val wordText: RDD[String] = sc.textFile("data/input/readWord.txt")
-    val value: RDD[SogouRecord.scala_JDBC_test] = wordText.filter(StringUtils.isNotBlank(_)).map(line => {
+    val value: RDD[testLibrary.scala_JDBC_test] = wordText.filter(StringUtils.isNotBlank(_)).map(line => {
       val arr: Array[String] = line.split("\\s+")
       arr(0).foreach(print)
       arr(1).foreach(print)
-      SogouRecord.scala_JDBC_test(
+      testLibrary.scala_JDBC_test(
         arr(0),
         arr(1)
       )
