@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="0">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/wordTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/jdbcUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/jdbcUtil.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/jdbcUtil$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/jdbcUtil$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input/person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/input/person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/readWord.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/readWord.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/jdbcUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/jdbcUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <recent name="spark" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.jdbcUtil">
+  <component name="RunManager" selected="Application.wordTest">
     <configuration name="insert" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.mysql.insert" />
       <module name="SouGouQueryAnalysis" />
@@ -114,19 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="jdbc_test" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.mysql.jdbc_test" />
-      <module name="SouGouQueryAnalysis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spark.sougou.jdbc.mysql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="readWord" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="spark.sougou.driver.readWord" />
       <module name="SouGouQueryAnalysis" />
@@ -140,13 +129,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="wordTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="spark.sougou.jdbc.wordTest" />
+      <module name="SouGouQueryAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spark.sougou.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.wordTest" />
         <item itemvalue="Application.jdbcUtil" />
         <item itemvalue="Application.insert" />
         <item itemvalue="Application.readWord" />
         <item itemvalue="Application.jdbc_mysql_OK" />
-        <item itemvalue="Application.jdbc_test" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +168,7 @@
       <workItem from="1686410636064" duration="2635000" />
       <workItem from="1686464351861" duration="5721000" />
       <workItem from="1686472901090" duration="4105000" />
-      <workItem from="1686618914014" duration="2335000" />
+      <workItem from="1686618914014" duration="5872000" />
     </task>
     <task id="LOCAL-00001" summary="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */">
       <created>1686154435036</created>
@@ -245,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686619500841</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="0">
+      <created>1686621630686</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686621630686</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

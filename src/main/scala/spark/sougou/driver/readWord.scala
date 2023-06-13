@@ -23,8 +23,9 @@ object readWord {
       arr(0).foreach(print)
       arr(1).foreach(print)
       testLibrary.scala_JDBC_test(
-        arr(0),
-        arr(1)
+        arr(0).toInt,
+        arr(1),
+        arr(2)
       )
     })
 
