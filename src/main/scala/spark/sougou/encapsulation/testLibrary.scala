@@ -8,6 +8,7 @@ package spark.sougou.encapsulation
  */
 object testLibrary {
   case class scala_JDBC_test(
+                              id: Int,
                               commit_log: String,
                               commit_time: String
                             )

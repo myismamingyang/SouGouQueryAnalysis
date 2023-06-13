@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="jdbcUtil.insert  ERROR" />
+    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/jdbcUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/jdbcUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/jdbcUtil$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/jdbcUtil$.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +166,7 @@
       <workItem from="1686410636064" duration="2635000" />
       <workItem from="1686464351861" duration="5721000" />
       <workItem from="1686472901090" duration="4105000" />
-      <workItem from="1686618914014" duration="570000" />
+      <workItem from="1686618914014" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */">
       <created>1686154435036</created>
@@ -234,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686479151424</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="0">
+      <created>1686619500841</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686619500841</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +274,7 @@
     <MESSAGE value="jdbc1" />
     <MESSAGE value="setGetString" />
     <MESSAGE value="jdbcUtil.insert  ERROR" />
-    <option name="LAST_COMMIT_MESSAGE" value="jdbcUtil.insert  ERROR" />
+    <MESSAGE value="0" />
+    <option name="LAST_COMMIT_MESSAGE" value="0" />
   </component>
 </project>
