@@ -57,13 +57,13 @@ object jdbc_mysql_OK {
     //    ps.executeUpdate(sqlstr)
     //    ps.close()
     //    connection.close()
-    var ip: String = "node3"
-    var database: String = "SouGouQueryAnalysis"
+    var ip: String = "localhost"
+    var database: String = "test"
     var user: String = "root"
-    var cipher: String = "MMYqq123"
-    var tablename: String = "scala_JDBC_test"
-    var columns: String = "commit_log,commit_time"
-    var data: String = "'sql-1','2023-06-10 23:56:30'"
+    var cipher: String = "root"
+    var tablename: String = "inserttest"
+    var columns: String = "id,create_date_time,session_id"
+    var data: String = "1,'sql-1','2023-06-10 23:56:30'"
 
     // insert into scala_JDBC_test(commit_log,commit_time) values("sql-1",date_format(now(),'%Y-%c-%d %h:%i:%s' ));
     // insert into scala_JDBC_test(commit_log,commit_time) values("sql-1","2023-06-10 23:56:30");
