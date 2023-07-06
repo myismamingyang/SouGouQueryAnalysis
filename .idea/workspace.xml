@@ -122,7 +122,7 @@
       <module name="SouGouQueryAnalysis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spark.*" />
+          <option name="PATTERN" value="spark.sougou.jdbc.mysql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

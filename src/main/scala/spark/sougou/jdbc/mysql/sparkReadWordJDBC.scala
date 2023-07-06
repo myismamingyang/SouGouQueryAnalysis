@@ -1,4 +1,4 @@
-package spark
+package spark.sougou.jdbc.mysql
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
@@ -10,7 +10,8 @@ import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
  * @Version: 1.0
  * @Function: spark 读取txt数据文件 生成schema 后将数据insert到 mysql
  */
-object wordJDBC {
+
+object sparkReadWordJDBC {
   case class windowsMYSQL(
                            id: Int
                            , create_date_time: String
@@ -30,29 +31,29 @@ object wordJDBC {
 
     val lines: RDD[String] = sc.textFile("data/datafile.txt")
 
-//     //windowsMYSQL
-//    val windowsSQLRDD: RDD[windowsMYSQL] = lines.map(line => {
-//      val arr: Array[String] = line.split(" ")
-//      windowsMYSQL(
-//        arr(0).toInt
-//        , arr(1)
-//        , arr(2))
-//    })
-//    import spark.implicits._
-//    val windowsMYSQLRDDDF: DataFrame = windowsSQLRDD.toDF()
-//
-//    windowsMYSQLRDDDF.printSchema()
-//
-//    val windowsMYSQLup = new java.util.Properties()
-//    windowsMYSQLup.put("user", "root")
-//    windowsMYSQLup.put("password", "root")
-//
-//    windowsMYSQLRDDDF.write
-//      .mode(SaveMode.Append)
-//      .jdbc("jdbc:mysql://localhost:3306/test", "inserttest", windowsMYSQLup) //windows MYSQL
-//
-//    println("已完成sql插入 windowsMYSQL")
-//    windowsMYSQLRDDDF.show()
+    //     //windowsMYSQL
+    //    val windowsSQLRDD: RDD[windowsMYSQL] = lines.map(line => {
+    //      val arr: Array[String] = line.split(" ")
+    //      windowsMYSQL(
+    //        arr(0).toInt
+    //        , arr(1)
+    //        , arr(2))
+    //    })
+    //    import spark.implicits._
+    //    val windowsMYSQLRDDDF: DataFrame = windowsSQLRDD.toDF()
+    //
+    //    windowsMYSQLRDDDF.printSchema()
+    //
+    //    val windowsMYSQLup = new java.util.Properties()
+    //    windowsMYSQLup.put("user", "root")
+    //    windowsMYSQLup.put("password", "root")
+    //
+    //    windowsMYSQLRDDDF.write
+    //      .mode(SaveMode.Append)
+    //      .jdbc("jdbc:mysql://localhost:3306/test", "inserttest", windowsMYSQLup) //windows MYSQL
+    //
+    //    println("已完成sql插入 windowsMYSQL")
+    //    windowsMYSQLRDDDF.show()
 
     // linuxMYSQL
     val linuxSQLRDD: RDD[linuxMYSQL] = lines.map(line => {
