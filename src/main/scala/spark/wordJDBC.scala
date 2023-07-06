@@ -8,10 +8,11 @@ import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
  * @Author: Mingyang Ma
  * @Date: 2023/7/5 14:52
  * @Version: 1.0
- * @Function:
+ * @Function: spark 读取txt数据文件 生成schema 后将数据insert到 mysql
  */
 object wordJDBC {
-  case class inserttest(id:Int,create_date_time:String,session_id:String)
+  case class inserttest(id: Int, create_date_time: String, session_id: String)
+
   def main(args: Array[String]): Unit = {
     val spark: SparkSession = SparkSession.builder().appName("sparksql").master("local[*]").getOrCreate()
     val sc: SparkContext = spark.sparkContext
@@ -21,7 +22,10 @@ object wordJDBC {
     val lines: RDD[String] = sc.textFile("data/datafile.txt")
     val personRDD: RDD[inserttest] = lines.map(line => {
       val arr: Array[String] = line.split(" ")
-      inserttest(arr(0).toInt, arr(1), arr(2))
+      inserttest(
+        arr(0).toInt
+        , arr(1)
+        , arr(2))
     })
     import spark.implicits._
     val personDF: DataFrame = personRDD.toDF()
