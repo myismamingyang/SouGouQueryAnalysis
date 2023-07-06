@@ -2,8 +2,10 @@ package spark.sougou.driver
 
 import org.apache.commons.lang3.StringUtils
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SaveMode
 import org.apache.spark.{SparkConf, SparkContext}
 import spark.sougou.encapsulation.SogouRecord
+import spark.sougou.queryanalysis.test
 
 /**
  * @Author: Mingyang Ma
