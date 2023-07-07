@@ -1,9 +1,12 @@
 package spark.sougou.queryanalysis
 
 import com.hankcs.hanlp.HanLP
+import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 import spark.sougou.encapsulation.SogouRecord
 
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import scala.collection.immutable.StringOps
 import scala.collection.mutable
 
@@ -15,7 +18,7 @@ import scala.collection.mutable
  * @Function: 3.2用户搜索词汇统计
  */
 object userSearchVocabulary {
-  def statistics(recordRDD: RDD[SogouRecord.Sogou]): Array[((String, String),Int)]={
+  def statistics(sc: SparkContext,recordRDD: RDD[SogouRecord.Sogou]): RDD[SogouRecord.userSearchVocabulary]={
     val result2: Array[((String, String),Int)]= recordRDD.flatMap(record => { //年轻人住房问题 出来: [(用户id,年轻人),(用户id,住房),(用户id,问题)]
       import scala.collection.JavaConverters._
       val userId: String = record.userId
@@ -33,6 +36,19 @@ object userSearchVocabulary {
       .sortBy(_._2, false)
       .take(10)
     //result2.foreach(println)
-    result2
+
+    val now: LocalDateTime = LocalDateTime.now()
+    val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+    val formattedDateTime: String = now.format(formatter)
+
+    val result2case: Array[(String, String, Int)] = result2.map { case ((id, words), count) => (id, words, count) }
+
+    val result2Schema: Array[SogouRecord.userSearchVocabulary] =
+      result2case.map { case (userId, searchWord,searchCount) =>
+        SogouRecord.userSearchVocabulary(userId, searchWord,searchCount, commitTime = formattedDateTime)
+      }
+    val result3RDD: RDD[SogouRecord.userSearchVocabulary] = sc.parallelize(result2Schema)
+
+    result3RDD
   }
 }

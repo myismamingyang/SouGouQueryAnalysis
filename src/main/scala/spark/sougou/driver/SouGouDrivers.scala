@@ -2,10 +2,11 @@ package spark.sougou.driver
 
 import org.apache.commons.lang3.StringUtils
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SaveMode
+import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 import spark.sougou.encapsulation.SogouRecord
-import spark.sougou.queryanalysis.test
+import spark.sougou.queryanalysis.{searchKeyWord, searchTimePeriod, userSearchVocabulary}
+import spark.sougou.jdbc.mysql.insertSouGouQueryAnalysis
 
 /**
  * @Author: Mingyang Ma
@@ -16,10 +17,12 @@ import spark.sougou.queryanalysis.test
 object SouGouDrivers {
   def main(args: Array[String]): Unit = {
     //1.sc
-    val sparkConf: SparkConf = new SparkConf().setAppName("wc").setMaster("local[*]")
-    val sc: SparkContext = new SparkContext(sparkConf)
+    //    val sparkConf: SparkConf = new SparkConf().setAppName("wc").setMaster("local[*]")
+    //    val sc: SparkContext = new SparkContext(sparkConf)
+    //    sc.setLogLevel("WARN")
+    val spark: SparkSession = SparkSession.builder().appName("sparksql").master("local[*]").getOrCreate()
+    val sc: SparkContext = spark.sparkContext
     sc.setLogLevel("WARN")
-
     //2.source
     val logRDD: RDD[String] = sc.textFile("data/input/SogouQ.sample")
 
@@ -37,13 +40,35 @@ object SouGouDrivers {
           arr(5)
         )
       })
+
+
+
     println("搜索关键词统计Top10统计")
-    spark.sougou.queryanalysis.searchKeyWord.statistics(recordRDD).foreach(println)
-
+    //spark.sougou.queryanalysis.searchKeyWord.statistics(recordRDD).foreach(println)
+    searchKeyWord.statistics(sc, recordRDD).foreach(println)
     println("用户搜索词汇统计Top10统计")
-    spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
+    //spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
+    userSearchVocabulary.statistics(sc,recordRDD).foreach(println)
     println("搜索时间段统计")
-    spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD).foreach(println)
+    //spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD).foreach(println)
+    searchTimePeriod.statistics(sc,recordRDD).foreach(println)
 
+    val searchWordRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)
+    val searchWordDataFrame: DataFrame = spark.createDataFrame(searchWordRDD)
+    import spark.implicits._
+    val searchWordDF: DataFrame = searchWordDataFrame.toDF()
+    insertSouGouQueryAnalysis.insertSchema("searchKeyWord",searchWordDF)
+
+    val suserSearchVocabularyRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)
+    val userSearchVocabularyDataFrame: DataFrame = spark.createDataFrame(suserSearchVocabularyRDD)
+    import spark.implicits._
+    val userSearchVocabularyDF: DataFrame = userSearchVocabularyDataFrame.toDF()
+    insertSouGouQueryAnalysis.insertSchema("userSearchVocabulary",userSearchVocabularyDF)
+
+    val searchTimePeriodRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)
+    val searchTimePeriodDataFrame: DataFrame = spark.createDataFrame(searchTimePeriodRDD)
+    import spark.implicits._
+    val searchTimePeriodDF: DataFrame = searchTimePeriodDataFrame.toDF()
+    insertSouGouQueryAnalysis.insertSchema("searchTimePeriod",searchTimePeriodDF)
   }
 }
