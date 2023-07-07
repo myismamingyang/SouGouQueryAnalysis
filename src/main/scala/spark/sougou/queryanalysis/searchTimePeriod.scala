@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter
  * @Function: 3.3搜索时间段统计(小时:分钟,数量)
  */
 object searchTimePeriod {
-  def statistics(sc: SparkContext,recordRDD: RDD[SogouRecord.Sogou]): RDD[SogouRecord.searchKeyWord] = {
+  def statistics(sc: SparkContext,recordRDD: RDD[SogouRecord.Sogou]): RDD[SogouRecord.searchTimePeriod] = {
     val result3: Array[(String, Int)] = recordRDD.map(record => {
       //00:00:00
       val tiem: String = record.queryTime.substring(0, 5) //[)
@@ -32,7 +32,7 @@ object searchTimePeriod {
       result3.map { case (searchTime,searchCount) =>
         SogouRecord.searchTimePeriod(searchTime, searchCount, commitTime = formattedDateTime)
       }
-    val result3RDD: RDD[SogouRecord.searchKeyWord] = sc.parallelize(result3Schema)
+    val result3RDD: RDD[SogouRecord.searchTimePeriod] = sc.parallelize(result3Schema)
 
     result3RDD
   }

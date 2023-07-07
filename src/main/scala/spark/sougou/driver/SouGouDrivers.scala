@@ -59,13 +59,13 @@ object SouGouDrivers {
     val searchWordDF: DataFrame = searchWordDataFrame.toDF()
     insertSouGouQueryAnalysis.insertSchema("searchKeyWord",searchWordDF)
 
-    val suserSearchVocabularyRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)
-    val userSearchVocabularyDataFrame: DataFrame = spark.createDataFrame(suserSearchVocabularyRDD)
+    val userSearchVocabularyRDD: RDD[SogouRecord.userSearchVocabulary] = userSearchVocabulary.statistics(sc, recordRDD)
+    val userSearchVocabularyDataFrame: DataFrame = spark.createDataFrame(userSearchVocabularyRDD)
     import spark.implicits._
     val userSearchVocabularyDF: DataFrame = userSearchVocabularyDataFrame.toDF()
     insertSouGouQueryAnalysis.insertSchema("userSearchVocabulary",userSearchVocabularyDF)
 
-    val searchTimePeriodRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)
+    val searchTimePeriodRDD: RDD[SogouRecord.searchTimePeriod] = searchTimePeriod.statistics(sc, recordRDD)
     val searchTimePeriodDataFrame: DataFrame = spark.createDataFrame(searchTimePeriodRDD)
     import spark.implicits._
     val searchTimePeriodDF: DataFrame = searchTimePeriodDataFrame.toDF()
