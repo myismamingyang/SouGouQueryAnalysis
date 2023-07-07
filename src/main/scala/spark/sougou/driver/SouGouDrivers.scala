@@ -41,8 +41,6 @@ object SouGouDrivers {
         )
       })
 
-
-
     println("搜索关键词统计Top10统计")
     //spark.sougou.queryanalysis.searchKeyWord.statistics(recordRDD).foreach(println)
     searchKeyWord.statistics(sc, recordRDD).foreach(println)
