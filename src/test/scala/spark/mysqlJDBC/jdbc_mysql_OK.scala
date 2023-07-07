@@ -1,7 +1,6 @@
-package spark.sougou.jdbc.mysql
+package spark.mysqlJDBC
 
-import java.sql.{Connection, DriverManager, PreparedStatement, ResultSet, Statement}
-
+import java.sql.{Connection, DriverManager, Statement}
 
 /**
  * @Author: Mingyang Ma

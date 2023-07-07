@@ -38,7 +38,8 @@ object SouGouDrivers {
         )
       })
     println("搜索关键词统计Top10统计")
-    spark.sougou.queryanalysis.searchKeyword.statistics(recordRDD).foreach(println)
+    spark.sougou.queryanalysis.searchKeyWord.statistics(recordRDD).foreach(println)
+
     println("用户搜索词汇统计Top10统计")
     spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
     println("搜索时间段统计")

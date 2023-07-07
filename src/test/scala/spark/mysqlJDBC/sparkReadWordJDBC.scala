@@ -1,4 +1,4 @@
-package spark.sougou.jdbc.mysql
+package spark.mysqlJDBC
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD

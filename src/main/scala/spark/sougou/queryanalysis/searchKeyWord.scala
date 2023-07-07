@@ -13,7 +13,7 @@ import scala.collection.mutable
  * @Version: 1.0
  * @Function: 3.1搜索关键词统计(word,数量),注意:词要做切割
  */
-object searchKeyword {
+object searchKeyWord {
   def statistics(recordRDD: RDD[SogouRecord.Sogou]):Array[(String, Int)] = {
     val result1: Array[(String, Int)] = recordRDD.flatMap(record => { //年轻人住房问题 出来: [年轻人,住房,问题]
       import scala.collection.JavaConverters._

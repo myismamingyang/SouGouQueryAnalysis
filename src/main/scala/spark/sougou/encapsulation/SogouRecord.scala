@@ -21,4 +21,9 @@ object SogouRecord {
                     clickRank: Int,
                     clickUrl: String
                   )
+  case class searchKeyWord(
+                    searchWord: String,
+                    wordCount: String,
+                    commitTime: String
+                  )
 }
