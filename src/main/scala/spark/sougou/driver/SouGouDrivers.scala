@@ -19,11 +19,9 @@ object SouGouDrivers {
     val spark: SparkSession = SparkSession.builder().appName("sparksql").master("local[*]").getOrCreate()
     val sc: SparkContext = spark.sparkContext
     sc.setLogLevel("WARN")
-    //2.source
+
     val logRDD: RDD[String] = sc.textFile("data/input/SogouQ.sample")
 
-    //3.transformation
-    //3.0转为样例类封装为一条条的记录对象
     val recordRDD: RDD[SogouRecord.Sogou] = logRDD.filter(StringUtils.isNotBlank(_)) //过滤出合法数据
       .map(line => {
         val arr: Array[String] = line.split("\\s+") //每行切分入厂
@@ -38,13 +36,10 @@ object SouGouDrivers {
       })
 
     println("搜索关键词统计Top10统计")
-    //spark.sougou.queryanalysis.searchKeyWord.statistics(recordRDD).foreach(println)
     searchKeyWord.statistics(sc, recordRDD).foreach(println)
     println("用户搜索词汇统计Top10统计")
-    //spark.sougou.queryanalysis.userSearchVocabulary.statistics(recordRDD).foreach(println)
     userSearchVocabulary.statistics(sc,recordRDD).foreach(println)
     println("搜索时间段统计")
-    //spark.sougou.queryanalysis.searchTimePeriod.statistics(recordRDD).foreach(println)
     searchTimePeriod.statistics(sc,recordRDD).foreach(println)
 
     val searchWordRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)

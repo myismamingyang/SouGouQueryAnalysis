@@ -30,7 +30,6 @@ object searchKeyWord {
       .reduceByKey(_ + _)
       .sortBy(_._2, false)
       .take(10)
-    //result1.foreach(println)
 
     val now: LocalDateTime = LocalDateTime.now()
     val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")

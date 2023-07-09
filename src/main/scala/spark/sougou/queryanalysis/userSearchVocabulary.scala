@@ -35,7 +35,6 @@ object userSearchVocabulary {
       .reduceByKey(_ + _) //[((用户id,年轻人),数量),((用户id,住房),数量)....]
       .sortBy(_._2, false)
       .take(10)
-    //result2.foreach(println)
 
     val now: LocalDateTime = LocalDateTime.now()
     val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
