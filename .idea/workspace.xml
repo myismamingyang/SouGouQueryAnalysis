@@ -4,91 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="mysql - encoding × UTF-8">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/datafile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/input/person.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/input/readWord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/input/text/words.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00000-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00001-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00002-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00003-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00004-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00005-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00006-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00007-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00008-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/.part-00009-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00000-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00001-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00002-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00003-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00004-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00005-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00006-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00007-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00008-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/itemFactors/part-00009-ce34f5b8-bb7f-4715-8a33-3acf30b4f7e8-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/metadata/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/metadata/.part-00000.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/metadata/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/metadata/part-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00000-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00001-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00002-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00003-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00004-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00005-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00006-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00007-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00008-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/.part-00009-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00000-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00001-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00002-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00003-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00004-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00005-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00006-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00007-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00008-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/als_model/1610178690932/userFactors/part-00009-03e7d1d9-3d22-418c-b616-4c4f498f7fd2-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/csv/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/csv/.part-00000-25b1d929-b21b-4608-b483-2eef92348201-c000.csv.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/csv/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/csv/part-00000-25b1d929-b21b-4608-b483-2eef92348201-c000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/json/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/json/.part-00000-c51db903-0b11-4ee8-8d07-a7ec80d27b2b-c000.json.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/json/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/json/part-00000-c51db903-0b11-4ee8-8d07-a7ec80d27b2b-c000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/object/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/object/.part-00000.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/object/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/object/part-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/orc/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/orc/.part-00000-1c2c820a-ef94-4421-b40c-b3e0ec898953-c000.snappy.orc.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/orc/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/orc/part-00000-1c2c820a-ef94-4421-b40c-b3e0ec898953-c000.snappy.orc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/parquet/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/parquet/.part-00000-1836238a-9936-4ff0-b00d-9e166bf3fd62-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/parquet/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/parquet/part-00000-1836238a-9936-4ff0-b00d-9e166bf3fd62-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/question_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/sequence/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/sequence/.part-00000.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/sequence/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/sequence/part-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/SouGouDrivers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/driver/SouGouDrivers.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/encapsulation/SogouRecord.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/encapsulation/SogouRecord.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/insertSouGouQueryAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/insertSouGouQueryAnalysis.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/spark/queryanalysis/test.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/insertSouGouQueryAnalysis$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spark/sougou/jdbc/mysql/insertSouGouQueryAnalysis$.class" afterDir="false" />
-    </list>
+    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="spark SouGou 1.0 - project OK" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -263,7 +179,7 @@
       <workItem from="1688539624782" duration="832000" />
       <workItem from="1688541273000" duration="1577000" />
       <workItem from="1688627670024" duration="7887000" />
-      <workItem from="1688693552381" duration="12590000" />
+      <workItem from="1688693552381" duration="12631000" />
     </task>
     <task id="LOCAL-00001" summary="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */">
       <created>1686154435036</created>
@@ -433,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688907538023</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="spark SouGou 1.0 - project OK">
+      <created>1688909185502</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1688909185502</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,6 +395,7 @@
     <MESSAGE value="spark2RDD2DataFrame2DF" />
     <MESSAGE value="spark sougou 1.0" />
     <MESSAGE value="mysql - encoding × UTF-8" />
-    <option name="LAST_COMMIT_MESSAGE" value="mysql - encoding × UTF-8" />
+    <MESSAGE value="spark SouGou 1.0 - project OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark SouGou 1.0 - project OK" />
   </component>
 </project>
