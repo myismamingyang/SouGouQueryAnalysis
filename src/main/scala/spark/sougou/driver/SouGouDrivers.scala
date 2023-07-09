@@ -2,7 +2,7 @@ package spark.sougou.driver
 
 import org.apache.commons.lang3.StringUtils
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
+import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 import spark.sougou.encapsulation.SogouRecord
 import spark.sougou.queryanalysis.{searchKeyWord, searchTimePeriod, userSearchVocabulary}
@@ -16,10 +16,6 @@ import spark.sougou.jdbc.mysql.insertSouGouQueryAnalysis
  */
 object SouGouDrivers {
   def main(args: Array[String]): Unit = {
-    //1.sc
-    //    val sparkConf: SparkConf = new SparkConf().setAppName("wc").setMaster("local[*]")
-    //    val sc: SparkContext = new SparkContext(sparkConf)
-    //    sc.setLogLevel("WARN")
     val spark: SparkSession = SparkSession.builder().appName("sparksql").master("local[*]").getOrCreate()
     val sc: SparkContext = spark.sparkContext
     sc.setLogLevel("WARN")
@@ -53,19 +49,19 @@ object SouGouDrivers {
 
     val searchWordRDD: RDD[SogouRecord.searchKeyWord] = searchKeyWord.statistics(sc, recordRDD)
     val searchWordDataFrame: DataFrame = spark.createDataFrame(searchWordRDD)
-    import spark.implicits._
+    //import spark.implicits._
     val searchWordDF: DataFrame = searchWordDataFrame.toDF()
     insertSouGouQueryAnalysis.insertSchema("searchKeyWord",searchWordDF)
 
     val userSearchVocabularyRDD: RDD[SogouRecord.userSearchVocabulary] = userSearchVocabulary.statistics(sc, recordRDD)
     val userSearchVocabularyDataFrame: DataFrame = spark.createDataFrame(userSearchVocabularyRDD)
-    import spark.implicits._
+    //import spark.implicits._
     val userSearchVocabularyDF: DataFrame = userSearchVocabularyDataFrame.toDF()
     insertSouGouQueryAnalysis.insertSchema("userSearchVocabulary",userSearchVocabularyDF)
 
     val searchTimePeriodRDD: RDD[SogouRecord.searchTimePeriod] = searchTimePeriod.statistics(sc, recordRDD)
     val searchTimePeriodDataFrame: DataFrame = spark.createDataFrame(searchTimePeriodRDD)
-    import spark.implicits._
+    //import spark.implicits._
     val searchTimePeriodDF: DataFrame = searchTimePeriodDataFrame.toDF()
     insertSouGouQueryAnalysis.insertSchema("searchTimePeriod",searchTimePeriodDF)
   }

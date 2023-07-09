@@ -1,4 +1,4 @@
-package spark.sougou.queryanalysis
+package spark.queryanalysis
 
 import com.hankcs.hanlp.HanLP
 import org.apache.spark.rdd.RDD

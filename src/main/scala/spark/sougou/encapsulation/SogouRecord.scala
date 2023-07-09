@@ -41,13 +41,13 @@ object SogouRecord {
                   )
   case class searchKeyWord(
                     searchWord: String,
-                    wordCount: Integer,
+                    wordCount: Int,
                     commitTime: String
                   )
   case class userSearchVocabulary(
                             userId: String,
                             searchWord: String,
-                            searchCount: Integer,
+                            searchCount: Int,
                             commitTime: String
                           )
   case class searchTimePeriod(
