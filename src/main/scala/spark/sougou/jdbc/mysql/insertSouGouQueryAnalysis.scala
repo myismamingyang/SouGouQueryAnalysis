@@ -15,11 +15,16 @@ object insertSouGouQueryAnalysis {
     linuxMYSQLup.put("user", "root")
     linuxMYSQLup.put("password", "MMYqq123")
 
+    val windowsMYSQLup = new java.util.Properties()
+    windowsMYSQLup.put("user", "root")
+    windowsMYSQLup.put("password", "root")
     searchDataDF.printSchema()
 
     searchDataDF.write
       .mode(SaveMode.Append)
-      .jdbc("jdbc:mysql://node3:3306/SouGouQueryAnalysis", tablename, linuxMYSQLup) //windows MYSQL
+      .option("encoding","UTF-8")
+      //.jdbc("jdbc:mysql://localhost:3306/test", tablename, windowsMYSQLup) //windows MYSQL
+      .jdbc("jdbc:mysql://node3:3306/SouGouQueryAnalysis", tablename, linuxMYSQLup) //linux MYSQL
 
     println(s" searchDataDF 已完成sql插入 ${tablename}")
     searchDataDF.show()
