@@ -22,7 +22,7 @@ object insertSouGouQueryAnalysis {
 
     searchDataDF.write
       .mode(SaveMode.Append)
-      //.jdbc("jdbc:mysql://localhost:3306/test", tablename, windowsMYSQLup) //windows MYSQL
+      //.jdbc("jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8", tablename, windowsMYSQLup) //windows MYSQL
       .jdbc("jdbc:mysql://node3:3306/SouGouQueryAnalysis?characterEncoding=UTF-8", tablename, linuxMYSQLup) //linux MYSQL
 
     println(" searchDataDF 已完成sql插入 " + tablename)
