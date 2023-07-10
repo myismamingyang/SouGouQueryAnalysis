@@ -14,7 +14,7 @@ import scala.collection.mutable
  * @Author: Mingyang Ma
  * @Date: 2023/6/8 23:46
  * @Version: 1.0
- * @Function: 3.1搜索关键词统计(word,数量),注意:词要做切割
+ * @Function: 1搜索关键词统计(word,数量),注意:词要做切割
  */
 object searchKeyWord {
   def statistics(sc: SparkContext, recordRDD: RDD[SogouRecord.Sogou]): RDD[SogouRecord.searchKeyWord] = {

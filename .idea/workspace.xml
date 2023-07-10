@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="spark SouGou 1.0 - project OK" />
+    <list default="true" id="4c3f3980-1723-468e-b000-16078a25c4e3" name="Changes" comment="Update workspace.xml&#10;&#10;ok 0">
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/insertSouGouQueryAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/jdbc/mysql/insertSouGouQueryAnalysis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchKeyWord.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchKeyWord.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchTimePeriod.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/searchTimePeriod.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/userSearchVocabulary.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/spark/sougou/queryanalysis/userSearchVocabulary.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,6 +185,7 @@
       <workItem from="1688541273000" duration="1577000" />
       <workItem from="1688627670024" duration="7887000" />
       <workItem from="1688693552381" duration="12631000" />
+      <workItem from="1688949973586" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="/**&#10; * @Author: Mingyang Ma&#10; * @Date: 2023/6/8 0:08&#10; * @Version: 1.0&#10; * @Function: 搜狗搜索日志分析&#10; */">
       <created>1686154435036</created>
@@ -356,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688909185502</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update workspace.xml&#10;&#10;ok 0">
+      <created>1688950168525</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688950168525</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,6 +409,7 @@
     <MESSAGE value="spark sougou 1.0" />
     <MESSAGE value="mysql - encoding × UTF-8" />
     <MESSAGE value="spark SouGou 1.0 - project OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark SouGou 1.0 - project OK" />
+    <MESSAGE value="Update workspace.xml&#10;&#10;ok 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml&#10;&#10;ok 0" />
   </component>
 </project>

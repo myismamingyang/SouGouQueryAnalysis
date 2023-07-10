@@ -6,7 +6,7 @@ import org.apache.spark.sql.{DataFrame, SaveMode}
  * @Author: Mingyang Ma
  * @Date: 2023/7/7 10:12
  * @Version: 1.0
- * @Function:
+ * @Function: DataFrame JDBC 插入数据
  */
 object insertSouGouQueryAnalysis {
   def insertSchema(tablename: String, searchDataDF: DataFrame): Unit = {

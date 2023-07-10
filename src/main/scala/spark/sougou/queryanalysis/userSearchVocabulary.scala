@@ -15,7 +15,7 @@ import scala.collection.mutable
  * @Author: Mingyang Ma
  * @Date: 2023/6/8 23:46
  * @Version: 1.0
- * @Function: 3.2用户搜索词汇统计
+ * @Function: 2用户搜索词汇统计
  */
 object userSearchVocabulary {
   def statistics(sc: SparkContext,recordRDD: RDD[SogouRecord.Sogou]): RDD[SogouRecord.userSearchVocabulary]={
